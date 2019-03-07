@@ -1,0 +1,40 @@
+／＊＊输入输出需求文档＊＊／
+1.	向board输入n，m值,j决定棋盘大小和几连能够胜利, 接收输入决定谁先下
+ Class BoardControler {
+ setBoardRule();
+ }
+
+2.	能够重置board，开始新游戏。
+ Class Board｛
+ resetGame()
+ ｝
+
+3.	能接收输入决定谁先下
+ 与需求1合并
+
+4.	能够循环进行游戏，人走一步ai一步，直到一方胜利，得到胜利者
+ Class BoardControler {
+ 主函数：findWinner();
+ 辅助函数：hasEmpty(); gotNewStep(); ifThisStepWin();
+ }
+
+5.	**能决定前两步如何落子
+ 需求不明确
+
+6.	能判断胜负！！输出谁赢了，结束游戏
+ 通过4得到胜利者，在
+ Class BoardControler {
+ showGameResult();
+ }
+ 中输出游戏结果
+
+7.	输出棋盘
+ Class Board {
+ showCurrentBoard ();
+ }
+ 
+8.	能接收输入的子，接收x坐标和y坐标，并传入棋盘。
+ Class BoardControler {
+ gotNewStep()
+ }
+ 不需要接收当前玩家的角色，因为每一步gotNewStep之后会调用Board类函数board.updatePlayer()自动更新下一个PLAYE。
